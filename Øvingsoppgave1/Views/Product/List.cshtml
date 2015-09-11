@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Øvingsoppgave1.Models.Product>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Name)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Description)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Price)
+        </td>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(item => p.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(item => p.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(item => p.Price)
+            </td>
+        </tr>
+    }
+</table>
+
